@@ -74,3 +74,32 @@ console.log(typeof bigNumber);
 console.log(typeof user);
 console.log(typeof heros);
 console.log(typeof myFunction);
+
+//++++++++++++++++++++++++++++++++++++++++++++++
+
+//stack(primitive) //they given us copy not changes in original one 
+
+// Heap(Non-Primitive) they given us a refrence change in original one 
+
+let myName = "Roshan";
+
+let anotherName = myName;
+ anotherName = "Aarti";
+
+console.log(anotherName);
+console.log(myName);
+
+let userOne = {
+    email: "rkchandra@google.com",
+    upi: "fduabnf@ybl"
+}
+
+let userTwo = userOne;
+userTwo.email ='aartigoogle.com';
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+
