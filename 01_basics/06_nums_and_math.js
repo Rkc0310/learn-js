@@ -35,24 +35,3 @@ const min = 20;
 const max = 30;
 
 console.log(Math.floor(Math.random()*(max - min +1)) + min);      //we use this formula to get a random number between min and max 20 to 30
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
