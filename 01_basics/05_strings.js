@@ -41,8 +41,3 @@ console.log(url.includes('sundar'));                 //it is used to check the v
 const speech = "Hello my name is Roshan. I am a software developer. I love coding.";
 
 console.log(speech.split(' '));                      //it is used to split the string into an array of words with space as a separator
-
-
-
- 
-
