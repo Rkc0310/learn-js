@@ -59,18 +59,3 @@ console.log(`my aaray after using splice(): ${myn2}`);
 console.log(`now check our orignal array after splice(): ${myArr}`);         
 
 // splice() method changes the original array, it removes the elements from the original array and returns a new array with the removed elements
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
