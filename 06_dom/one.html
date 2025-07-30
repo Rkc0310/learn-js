@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-</head>
-<body>
-    <div class="heading"> <h1>hello</h1></div>
     
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
 </body>
 </html>
+
+<!-- What is the DOM?
+The Document Object Model (DOM) is a tree-like structure that represents all elements, attributes, and content on a web page. Browsers create the DOM when they load HTML.
+
+Each element (like <div>, <p>, etc.) becomes a node in this tree.
+
+How JavaScript Interacts with the DOM
+JavaScript uses the DOM API to access and change the web page dynamically—without reloading.
+
+Common Tasks in DOM Manipulation
+Select Elements: Find and reference HTML elements using methods like:
+
+document.getElementById('id') — by ID
+
+document.getElementsByClassName('class') — by class
+
+document.getElementsByTagName('tag') — by tag
+
+document.querySelector('selector') — first match by CSS selector
+
+document.querySelectorAll('selector') — all matches by CSS selector
+
+
+
+Change Content:
+
+.innerHTML sets/gets HTML content (can add markup).
+
+.textContent sets/gets plain text (no markup).
+
+
+
+Change Attributes/Styles:
+
+.setAttribute('attr', value) changes attributes.
+
+.style.property changes inline CSS, e.g., element.style.color = 'red'
+
+
+
+A NodeList is an array-like collection of nodes (elements, text, or comment nodes) returned by DOM methods like document.querySelectorAll() and properties like childNodes.
+
+Access:
+Items are accessed by index, starting at 0 (e.g., myNodeList).
+The .length property tells how many nodes are in the list.
+
+Not a True Array:
+A NodeList looks like an array but is not. Standard array methods (like map(), filter()) don't work directly.
+However, you can use forEach() to loop through NodeLists, and you can convert NodeLists to arrays with Array.from(myNodeList)
+
+
+.............................What are NodeList and HTMLCollection?......................................
+NodeList: An array-like collection of nodes (can be elements, text nodes, comment nodes), often returned by querySelectorAll() (static) or childNodes (live).
+
+HTMLCollection: An array-like collection of only element nodes, returned by getElementsByClassName(), getElementsByTagName(), or .children. Always live (updates with DOM changes).
+
+......Why Convert to Array?
+Neither NodeList nor HTMLCollection is a true JavaScript Array. They don’t support most array methods (like map(), filter(), etc.), so conversion is common before manipulation.
+
+How to Convert..........................
+1. Using Array.from()
+Works for both NodeList and HTMLCollection (ES6 and above):-->
