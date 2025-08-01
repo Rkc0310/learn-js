@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn- edit -remove - in js </title>
+</head>
+<body style = "background-color: #212121; color: #fff;">
+
+    <ul class = "language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+
+
+    function addLanguage(langName){
+        const li = document.createElement('li');                     // Create a new list item element
+        li.innerHTML = `${langName}`                                        // Set the inner HTML of the list item to the language name
+        document.querySelector('.language').appendChild(li)                // Append the new list item to the existing list with class 'language'
+    }
+    addLanguage("python")                                                    // Call the function to add a new language
+    addLanguage("typescript")                                                // Call the function to add another language
+
+
+
+    //this is another way to add a language in optimized way
+    function addoptiLanguage(langName){
+        const li = document.createElement('li');                              // Create a new list item element
+        li.appendChild(document.createTextNode(langName))                         // Create a text node with the language name and append it to the list item
+        document.querySelector('.language').appendChild(li)         // Append the new list item to the existing list with class 'language'
+    }
+  addoptiLanguage("solidity")                                        // Call the function to add another language
+
+
+
+  //editing a list item 
+ const secondLang = document.querySelector("li:nth-child(2)")      // Select the second list itemusing the nth-child selector 
+  console.log(secondLang);
+  //seconndlang.innerHTML = "Mojo"                 // Edit the inner HTML of the second list item to "Mojo" this will first way to edit
+ const newli = document.createElement('li')                // Create a new list item element store in newli
+ newli.textContent = "Mojo"                                  // Set the text content of the new list item to "Mojo"
+
+ secondLang.replaceWith(newli)       //using replaceWith method to replace the second list item with the new list item
+  
+
+//practice to edit a third list item
+// const third_li = document.querySelector("li:nth-child(3)")
+// console.log(third_li);
+// // third_li.innerHTML = "web3"
+
+// const new_Li = document.createElement('li')
+// new_Li.innerText = "web3"
+// third_li.replaceWith(new_Li);
+
+
+//editing a first list item this is another way to edit using outerHTML
+const first_li = document.querySelector("li:first-child")
+first_li.outerHTML = '<li>Web3</>'                   // we neew to writw a whole li tag with outerHTML
+
+//this is how to remove a list item
+const lastLang = document.querySelector("li:last-child") // Select the last list item store in lastLang
+lastLang.remove();   //using remove method to remove the last list item from the list 
+
+</script>
+</html>
