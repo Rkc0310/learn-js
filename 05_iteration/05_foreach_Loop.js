@@ -21,32 +21,32 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 // function printMe(items){
 //     console.log(items);
 // }
-// coding.forEach(printMe)                                        // we can pass the printMe function as a callback to forEach
+// coding.forEach(printMe)                               // we can pass the printMe function as a callback to forEach
 
 // we can use forEach to iterate over an array and print each item with its index and the entire array..................
-// coding.forEach((items, index, arr)=>{
-// console.log(items, index, arr);
-// })
+coding.forEach((items, index, arr)=>{
+console.log(items, index, arr);
+})
 
 
 // we can use forEach to iterate over an array of objects and print each item with its properties.....................
-const myCoding = [  
-{
-    languageName: "javascript",
-    languageFileName: "js"
-},
+// const myCoding = [  
+// {
+//     languageName: "javascript",
+//     languageFileName: "js"
+// },
 
-{
-    languageName: "java",
-    languageFileName: "java"
-},
+// {
+//     languageName: "java",
+//     languageFileName: "java"
+// },
 
-{
-    languageName: "python",
-    languageFileName: "py"
-},
-]
+// {
+//     languageName: "python",
+//     languageFileName: "py"
+// },
+// ]
 
-myCoding.forEach((items)=>{ // we can use forEach to iterate over an array of objects and print here a languageName property of each item
-console.log(items.languageName );
-})
+// myCoding.forEach((items)=>{ // we can use forEach to iterate over an array of objects and print here a languageName property of each item
+// console.log(items.languageName );
+// })
