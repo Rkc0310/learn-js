@@ -18,7 +18,17 @@ if(el.target.id === 'blue'){
   body.style.backgroundColor = el.target.id
 }
 if(el.target.id === 'yellow'){
-  body.style.backgroundColor = el.target.id
+  body.style.backgroundColor = el.target.id 
+}
+
+const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16); 
+
+if (el.target.id === "muti_color"){
+body.style.backgroundColor = randomColor
 }
 })
 })
+
+
+
+
