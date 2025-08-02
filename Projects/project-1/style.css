@@ -18,6 +18,13 @@ span {
   display: inline-block;
 }
 
+.button2 {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+}
+
 #grey {
   background: grey;
 }
@@ -30,4 +37,8 @@ span {
 }
 #yellow {
   background: yellow;
+}
+
+#muti_color {
+  background: linear-gradient(110.28deg, #a40060 0%, #a8ffb7 100%);
 }
