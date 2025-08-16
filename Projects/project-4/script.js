@@ -15,17 +15,17 @@ let numGuess = 1;                                              //how many guess 
 
 let playGame = true;                                          //allow user to play game or not to check condition 
 
-//first we check we are able to play game or not 
+//first we check we are able to play game or not
 if(playGame){
     submit.addEventListener('click', function(e){
         e.preventDefault()                                    //prevent default is used to stop the form from submitting and refreshing the page
-       
+
         const guess = parseInt(userInput.value);               // user input a value and convert it to integer
-  
-        console.log(guess);
-        
+
+    console.log(guess);
+
        validateGuess(guess);                                 //passing guess value to validate function
-    });
+  });
 
 }
 
@@ -45,8 +45,8 @@ function validateGuess(guess){                                //useing this fn t
         }else{                                                                   // if user not reach maximum guess then we check the guess value
             displayGuess(guess)                                                  // display guess value using displayGuess function
             checkGuess(guess)                                                   // check the guess value using checkGuess function
-        }            
     }
+  }
 }
 
 function checkGuess(guess){                                                         //its use to print message guess value correct or low or high 
@@ -56,7 +56,7 @@ function checkGuess(guess){                                                     
         displayMessage(`Number is TOOO low`)
     }else if(guess > randomNumber){
         displayMessage(`Number is TOOO High`)
-    }
+  }
 }
 
 function displayGuess(guess){                                           //direct intract with DOM Claen Value , update array  
@@ -75,7 +75,7 @@ function endGame(){
 userInput.value = '';  // clear input field
 userInput.setAttribute('disabled', "")     // disable input field so user can't enter any value
 p.classList.add('button')      // add class to p element for styling
-p.innerHTML = `<h2 id = "newGame"> Start new Game </h2>`; // add text to p element
+  p.innerHTML = `<h2 id = "newGame"> Start new Game </h2>`; // add text to p element
 startOver.appendChild(p) // append p element to startOver div
 playGame = false ;        // set playGame to false so user can't play the game again    
 
@@ -91,10 +91,9 @@ function newGame (){
     numGuess = 1;
     guessSlot.innerHTML = '';
     remaining.innerHTML = `${11 - numGuess}`;
-    userInput.removeAttribute('disabled');
+    userInput.removeAttribute("disabled");
     startOver.removeChild(p);
 
     playGame = true;
- });
+  });
 }
-
