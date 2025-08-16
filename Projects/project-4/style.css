@@ -21,7 +21,7 @@ body {
 }
 
 button {
-  background-color: #141414;
+  background-color: #0232f0;
   color: #fff;
   width: 250px;
   height: 50px;
@@ -33,7 +33,7 @@ button {
 }
 
 #subt {
-  background-color: #161616;
+  background-color: #ab0a0a;
   color: #ffffff;
   width: 200px;
   height: 50px;
@@ -88,4 +88,17 @@ h1 {
 p {
   font-size: 16px;
   text-align: center;
+}
+
+#newGame{
+  background-color: #ab0a0a;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  border-style: none;
+  margin-top: 4px;
+  margin-left: 75px;
+
 }
