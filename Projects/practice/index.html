@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset=utf-8 />
+        <title>JS DOM paragraph style</title>
+        <style>
+                body {
+                        padding-top: 30px;
+                }
+
+                label,
+                input {
+                        display: block;
+                }
+        </style>
+</head>
+
+<body>
+        <p id='text'>JavaScript Exercises - w3resource</p>
+        <div>
+                <button id="jsstyle" onclick="js_style()"> Style </button>
+        </div>
+
+        <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self"
+                        href="https://www.w3resource.com/">w3resource</a></p>
+        <button onclick="getAttributes()">Click here to get attributes value</button>
+        <br>
+
+        </br>
+
+        <table id="sampleTable" border="1">
+                <tr>
+                        <td>Row1 cell1</td>
+                        <td>Row1 cell2</td>
+                </tr>
+                <tr>
+                        <td>Row2 cell1</td>
+                        <td>Row2 cell2</td>
+                </tr>
+        </table><br>
+        <input type="button" onclick="insert_Row()" value="Insert row">
+
+        <br> </br>
+
+        <form>
+                <select id="colorSelect">
+                        <option>Red</option>
+                        <option>Green</option>
+                        <option>White</option>
+                        <option>Black</option>
+                </select>
+                <input type="button" onclick="removecolor()" value="Select and Remove">
+                <!-- <input type="button" onclick="removecolor()" value="Select and Remove"> -->
+        </form>
+
+
+        <p>Input radius value and get the volume of a sphere.</p>
+        <form action="" method="post" id="MyForm">
+                <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+                <label for="volume">Volume</label><input type="text" name="volume" id="volume">
+                <input type="submit" value="Calculate" id="submit">
+        </form>
+
+</body>
+<script src="script.js"></script>
+
+</html>
