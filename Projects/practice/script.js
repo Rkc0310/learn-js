@@ -91,3 +91,69 @@ let volume_result = (4/3) * Math.PI * Math.pow(radius, 3);
 });
 
 
+
+// Image list with properties
+    const images = [
+      {
+        url: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+        width: "240",
+        height: "160"
+      },
+      {
+        url: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+        width: "320",
+        height: "195"
+      },
+      {
+        url: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+        width: "500",
+        height: "343"
+      }
+    ];
+
+    function showRandomImage(){
+        const randomIndex = Math.floor(Math.random() * images.length )
+        console.log(randomIndex);
+       const selectedImg = images[randomIndex];
+
+       //creating new image container 
+       const newImg = document.createElement('img');
+       newImg.src = selectedImg.url;
+       newImg.width = selectedImg.width;
+       newImg.height = selectedImg.height;
+
+
+       const imageContainer =  document.getElementById('image-container')
+       imageContainer.innerHTML = '';
+       imageContainer.appendChild(newImg)
+    }
+
+    //Highlight Bold on Hover
+    // var boldItems ;
+    // window.onload = get_BoldItem();
+   
+    
+const bold_Word = document.getElementsByTagName('strong')
+        function highlight(){
+        //  for (const word of bold_Word) {
+        //     word.style.color = "green"
+        //  } 
+
+        // for(i = 0; i< bold_Word.length; i++){
+        //     bold_Word[i].style.color = "green"
+        // }
+
+           Array.from(bold_Word).forEach(word=>{
+            word.style.color = "green"
+           })
+        }
+
+        function return_normal(){
+      for (const word of bold_Word) {
+        word.style.color = "black"
+      }
+            
+        }
+     
+
+
