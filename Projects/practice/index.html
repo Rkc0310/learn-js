@@ -13,6 +13,9 @@
                 input {
                         display: block;
                 }
+
+               #image-container {margin-top: 20px;}
+  
         </style>
 </head>
 
@@ -61,6 +64,33 @@
                 <label for="volume">Volume</label><input type="text" name="volume" id="volume">
                 <input type="submit" value="Calculate" id="submit">
         </form>
+
+        <br>  </br>
+
+         <h2>Random Image Display</h2>
+  <button onclick="showRandomImage()">Show Random Image</button>
+
+  <div id="image-container"></div>
+
+
+   <p>[<a href="#" onMouseOver = "highlight()" onMouseOut="return_normal()">On mouse over here bold words of the following paragraph will be highlighted</a>]</p> 
+   
+   <p>
+        <strong>We</strong> have just started 
+        <strong>this</strong> section for the users 
+        (<strong>beginner</strong> to intermediate) who 
+        <strong>want</strong> to work with 
+        <strong>various</strong> JavaScript 
+        <strong>problems</strong> and write scripts online to 
+        <strong>test</strong> their JavaScript 
+        <strong>skill</strong>.
+   </p>
+
+   <br>
+
+   <div id="example1">'This is the original content using innerHTML.'</div>
+   <div id="example1">'This is the original text content using textContent.'</div>
+   <button onclick="changeContent()">Change content</button>
 
 </body>
 <script src="script.js"></script>
