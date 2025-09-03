@@ -10,6 +10,7 @@ const randomColor = function(){
 }
 console.log(randomColor());
 let intervalId;
+
 const startChangingColor = function(){
     if(!intervalId){
        intervalId =  setInterval(chanbgColor,1000);
