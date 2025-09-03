@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice que for setinterval </title>
+  <style>
+    .colored {
+      color: red;
+      font-weight: bold;
+    }
+
+  #container{
+        width: 300px;
+      height: 30px;
+      background-color: lightgray;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      }
+
+  #progressBar{
+   height: 100%;
+      width: 0%;
+      background-color: green;
+      transition: width 0.3s;
+  }  
+
+  #status{
+      font-weight: bold;
+      margin-top: 10px;
+  }
+
+   #blink-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+    <p id="text">This is a colorful text!</p>
+    <h1 id="quote"></h1>
+    <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn">Resume</button>
+       
+      
+    
+      <div id="time">0</div>
+      <button id="stopBtn">Stop</button>
+      <button id="startBtn">Start</button>
+
+      <h2 id="countDown"></h2>
+    
+      <div id="container">
+           <div id="progressBar"></div>
+      </div>
+      <p id="status">status</p>
+
+      <p id="blink-text">"this is a blinking text "</p>
+      
+      <script src="script.js"></script>
+
+  
+</body>
+</html>
