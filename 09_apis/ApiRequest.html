@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body style="background-color: #212121">
+
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+    
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'   //api url
+    const xhr = new XMLHttpRequest();       //create an xhr object using constructor thereworks like fetch api
+    xhr.open('GET', requestUrl)            //open a connection using open method Get method used to fetch data 
+    xhr.onreadystatechange = function(){   //onreadystatechange event is fired whenever the readyState property changes 
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){         //in this line we are checking the readyState is 4 or not if it is 4 then we will get the data 4 
+            
+          const  data = JSON.parse(this.responseText); //converting json data into js object
+          console.log(data);
+           
+        // Displaying data on browser 
+             // create a class container
+   const card =  document.createElement('div');
+    card.classList.add('card');
+
+    //Add an image 
+    const img = document.createElement('img');
+    img.src = data.avatar_url;
+    img.alt = "card-image";
+    img.style= "width:100%"
+    card.appendChild(img)
+    
+
+    //add content container
+    const content = document.createElement('div');
+    content.classList.add('container')
+
+    //add card  title
+    const title = document.createElement('h2')
+    title.textContent = data.name;
+    content.appendChild(title);
+
+    //add card discription
+    const  desc = document.createElement('p')
+    desc.textContent = `Follower: ${data.followers}`
+    content.appendChild(desc);
+
+    card.appendChild(content);
+
+    document.body.appendChild(card);
+
+   console.log(card);
+        } 
+    }
+    xhr.send();        //send the request to the server and fetch the data 
+
+
+    
+    
+</script>
+</html>
